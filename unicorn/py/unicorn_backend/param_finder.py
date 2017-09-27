@@ -237,7 +237,7 @@ def findParameters(samples):
 
   medianSamplingIntervalInMs = _getMedianSamplingInterval(timestampsInMs)
   
-  if medianSamplingIntervalInMs > 0:
+  if numpy.greater(medianSamplingIntervalInMs, 0, casting="unsafe"):
     values = _resampleData(timestampsInMs,
                            values,
                            medianSamplingIntervalInMs)
