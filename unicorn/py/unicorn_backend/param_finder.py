@@ -565,7 +565,7 @@ def _determineEncoderTypes(cwtVar, timeScale):
         rightLocalMinValue = cwtVar[rightLocalMin]
   
       localMaxValue = cwtVar[localMax[i]]
-      nearestLocalMinValue = numpy.max(leftLocalMinValue, rightLocalMinValue)
+      nearestLocalMinValue = numpy.max([leftLocalMinValue, rightLocalMinValue])
   
       if ((localMaxValue - nearestLocalMinValue) / localMaxValue > 0.1 and
               localMaxValue > baselineValue):
