@@ -68,7 +68,7 @@ class _Options(object):
                valueIndex,
                datetimeFormat):
     """
-    :param fileName: str path to input csv file
+    :param csv: str path to input csv file
     :param rowOffset: int, zero-based index of first data row in csv
     :param timestampIndex: int, zero-based column index of the timestamp
     :param valueIndex: int, zero-based column index of the value
